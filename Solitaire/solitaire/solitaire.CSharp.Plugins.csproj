@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9A4713C-8327-913B-FCB0-4A7B2434C336}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.4.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;UNITY_ANALYTICS;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;UNITY_ANALYTICS;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity">
+      <HintPath>Assets\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>Assets\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>Assets\Lib\CommonLib\Libraries\third_parties\google_api\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions">
+      <HintPath>Assets\Lib\CommonLib\Libraries\third_parties\google_api\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Spreadsheets">
+      <HintPath>Assets\Lib\CommonLib\Libraries\third_parties\google_api\Google.GData.Spreadsheets.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Lib\CommonLib\Libraries\third_parties\newtonsoft_json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="VungleSDKProxy">
+      <HintPath>Assets\Plugins\VungleSDKProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonFx.Json">
+      <HintPath>Assets\Plugins\Kochava\Scripts\JsonFx.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Plugins\Kochava\Scripts\Kochava.cs" />
+    <Compile Include="Assets\Plugins\Vungle\AdFinishedEventArgs.cs" />
+    <Compile Include="Assets\Plugins\Vungle\Android\VungleAndroid.cs" />
+    <Compile Include="Assets\Plugins\Vungle\MiniJSONV.cs" />
+    <Compile Include="Assets\Plugins\Vungle\Vungle.cs" />
+    <Compile Include="Assets\Plugins\Vungle\VungleManager.cs" />
+    <Compile Include="Assets\Plugins\Vungle\VungleSceneLoom.cs" />
+    <Compile Include="Assets\Plugins\Vungle\demo\VungleComboUI.cs" />
+    <Compile Include="Assets\Plugins\Vungle\iOS\VungleBinding.cs" />
+    <Compile Include="Assets\Plugins\Vungle\win\VungleWin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AdmobAPI\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\AppLovin\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\AppLovin\Plugins\AppLovin Readme.txt" />
+    <None Include="Assets\FacebookSDK\link.xml" />
+    <None Include="Assets\Lib\CommonLib\Plugins\Android\res\values\version.xml" />
+    <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Ghost\Shaders\SkeletonGhost.shader" />
+    <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Shaders\Bones.shader" />
+    <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Shaders\HiddenPass.shader" />
+    <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Shaders\Skeleton.shader" />
+    <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Shaders\SkeletonLit.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SkeletonMasked.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SpriteClipRect.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SpriteClipRectMask.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SpriteCull.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SpriteMask.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\SpriteMasked.shader" />
+    <None Include="Assets\Lib\CommonLib\Shaders\UIMasked.shader" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\Vungle_lib\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\_KOCHAVA_SAMPLE_AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Kochava\_LICENSE.txt" />
+    <None Include="Assets\Plugins\Kochava\_README.txt" />
+    <None Include="Assets\Resources\challenge\solitaire1.txt" />
+    <None Include="Assets\Resources\challenge\solitaire10.txt" />
+    <None Include="Assets\Resources\challenge\solitaire11.txt" />
+    <None Include="Assets\Resources\challenge\solitaire12.txt" />
+    <None Include="Assets\Resources\challenge\solitaire13.txt" />
+    <None Include="Assets\Resources\challenge\solitaire14.txt" />
+    <None Include="Assets\Resources\challenge\solitaire15.txt" />
+    <None Include="Assets\Resources\challenge\solitaire16.txt" />
+    <None Include="Assets\Resources\challenge\solitaire2.txt" />
+    <None Include="Assets\Resources\challenge\solitaire3.txt" />
+    <None Include="Assets\Resources\challenge\solitaire4.txt" />
+    <None Include="Assets\Resources\challenge\solitaire5.txt" />
+    <None Include="Assets\Resources\challenge\solitaire6.txt" />
+    <None Include="Assets\Resources\challenge\solitaire7.txt" />
+    <None Include="Assets\Resources\challenge\solitaire8.txt" />
+    <None Include="Assets\Resources\challenge\solitaire9.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire1.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire10.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire100.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire101.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire102.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire103.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire104.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire105.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire106.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire107.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire108.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire109.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire11.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire110.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire111.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire112.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire113.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire114.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire115.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire116.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire117.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire118.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire119.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire12.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire120.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire121.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire122.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire123.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire124.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire125.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire126.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire127.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire128.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire129.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire13.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire130.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire131.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire132.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire133.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire134.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire135.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire136.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire137.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire138.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire139.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire14.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire140.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire141.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire142.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire143.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire144.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire145.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire146.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire147.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire148.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire149.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire15.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire150.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire151.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire152.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire153.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire154.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire155.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire156.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire157.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire158.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire159.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire16.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire160.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire161.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire162.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire163.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire164.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire165.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire166.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire167.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire168.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire169.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire17.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire170.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire171.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire172.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire173.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire174.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire175.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire176.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire177.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire178.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire179.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire18.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire180.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire181.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire182.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire183.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire184.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire185.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire186.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire187.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire188.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire189.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire19.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire190.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire191.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire192.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire193.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire194.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire195.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire196.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire197.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire198.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire199.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire2.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire20.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire200.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire201.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire202.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire203.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire204.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire205.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire206.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire207.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire208.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire209.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire21.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire210.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire211.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire212.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire213.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire214.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire215.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire216.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire217.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire218.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire219.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire22.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire220.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire221.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire222.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire223.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire224.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire225.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire226.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire227.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire228.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire229.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire23.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire230.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire231.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire232.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire233.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire234.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire235.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire236.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire237.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire238.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire239.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire24.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire240.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire241.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire242.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire243.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire244.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire245.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire246.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire247.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire248.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire249.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire25.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire250.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire251.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire252.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire253.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire254.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire255.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire256.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire257.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire258.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire259.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire26.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire260.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire261.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire262.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire263.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire264.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire265.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire266.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire267.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire268.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire269.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire27.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire270.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire271.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire272.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire273.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire274.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire275.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire276.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire277.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire278.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire279.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire28.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire280.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire281.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire282.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire283.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire284.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire285.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire286.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire287.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire288.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire289.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire29.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire290.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire291.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire292.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire293.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire294.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire295.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire296.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire297.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire298.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire299.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire3.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire30.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire300.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire301.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire302.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire303.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire304.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire305.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire306.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire307.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire308.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire309.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire31.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire310.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire311.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire312.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire313.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire314.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire315.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire316.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire317.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire318.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire319.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire32.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire320.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire321.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire322.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire323.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire324.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire325.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire326.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire327.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire328.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire329.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire33.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire330.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire331.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire332.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire333.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire334.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire335.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire336.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire337.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire338.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire339.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire34.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire340.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire341.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire342.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire343.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire35.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire36.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire37.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire38.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire39.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire4.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire40.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire41.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire42.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire43.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire44.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire45.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire46.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire47.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire48.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire49.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire5.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire50.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire51.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire52.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire53.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire54.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire55.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire56.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire57.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire58.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire59.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire6.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire60.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire61.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire62.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire63.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire64.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire65.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire66.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire67.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire68.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire69.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire7.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire70.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire71.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire72.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire73.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire74.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire75.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire76.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire77.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire78.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire79.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire8.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire80.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire81.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire82.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire83.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire84.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire85.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire86.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire87.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire88.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire89.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire9.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire90.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire91.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire92.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire93.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire94.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire95.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire96.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire97.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire98.txt" />
+    <None Include="Assets\Resources\winablegames\solitaire99.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>
