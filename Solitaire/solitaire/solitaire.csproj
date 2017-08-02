@@ -131,6 +131,7 @@
     <Compile Include="Assets\CardEditMgr.cs" />
     <Compile Include="Assets\CardLoader.cs" />
     <Compile Include="Assets\ChallengeMgr.cs" />
+    <Compile Include="Assets\ConsolePro\ConsoleProRemoteServer.cs" />
     <Compile Include="Assets\DayBtn.cs" />
     <Compile Include="Assets\DebugWin.cs" />
     <Compile Include="Assets\Facebook\FacebookHelper.cs" />
@@ -403,6 +404,7 @@
     <None Include="Assets\AdmobAPI\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\AppLovin\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\AppLovin\Plugins\AppLovin Readme.txt" />
+    <None Include="Assets\ConsolePro\Readme.txt" />
     <None Include="Assets\FacebookSDK\link.xml" />
     <None Include="Assets\Lib\CommonLib\Plugins\Android\res\values\version.xml" />
     <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Ghost\Shaders\SkeletonGhost.shader" />

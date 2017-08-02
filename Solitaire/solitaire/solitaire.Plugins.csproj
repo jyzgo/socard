@@ -122,6 +122,7 @@
     <None Include="Assets\AdmobAPI\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\AppLovin\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\AppLovin\Plugins\AppLovin Readme.txt" />
+    <None Include="Assets\ConsolePro\Readme.txt" />
     <None Include="Assets\FacebookSDK\link.xml" />
     <None Include="Assets\Lib\CommonLib\Plugins\Android\res\values\version.xml" />
     <None Include="Assets\Lib\CommonLib\Scripts\third_parties\spine\spine-unity\Ghost\Shaders\SkeletonGhost.shader" />
