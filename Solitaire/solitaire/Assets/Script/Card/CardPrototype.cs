@@ -60,7 +60,7 @@ public class CardPrototype : CardAbstract {
 
     public override void UpdateCardView()
     {
-        Center.sprite = ResMgr.current.GetIcon(cardColor);  //  cardData.Center;
+        Center.sprite = ResMgr.current.GetIcon(cardColor,CardNum);  //  cardData.Center;
                                                             // Icon.sprite = cardData.Icon;
         Num.sprite = ResMgr.current.GetNum(CardNum);// [CardNum-1];
 

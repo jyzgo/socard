@@ -29,7 +29,7 @@ public class ResMgr : MonoBehaviour {
 
 
     public Sprite[] RightSprites;
-
+    public Sprite[] KingsSprites;
 
     public Sprite[] NumSprites;
 
@@ -42,13 +42,17 @@ public class ResMgr : MonoBehaviour {
 
 
 
-    public Sprite GetIcon( CardColor col)
+    public Sprite GetIcon( CardColor col,int CardNum)
     {
         if ((int)col > RightSprites.Length - 1)
         {
             Debug.Log("col " + (int)col);
         }
-        
+        if(CardNum > 10)
+        {
+            int index = (int)col * 3  + (CardNum - 11);
+            return KingsSprites[index];
+        }
         return RightSprites[(int)col];
     }
 
