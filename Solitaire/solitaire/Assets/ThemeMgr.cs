@@ -20,7 +20,7 @@ public class ThemeMgr : MonoBehaviour {
     public GameObject CardBgPrefab;
     public GameObject CardRoot;
 
-    const int themeMaxId = 16;
+    const int themeMaxId = 4;
     const int cardBgMaxIndex = 21;
 
     int _curThemeIndex = 1;
@@ -94,6 +94,8 @@ public class ThemeMgr : MonoBehaviour {
             _cardBgList.Add(cardSe);
             inst.transform.SetParent(CardRoot.transform);
             inst.transform.localScale = new Vector3(1, 1, 1);
+            var olePos = inst.transform.localPosition;
+            inst.transform.localPosition = new Vector3(olePos.x, olePos.y, 0f);
         }
 
         _themeList.Clear();
@@ -107,6 +109,8 @@ public class ThemeMgr : MonoBehaviour {
             _themeList.Add(cardSe);
             inst.transform.SetParent(ThemeRoot.transform);
             inst.transform.localScale = new Vector3(1, 1, 1);
+            var olePos = inst.transform.localPosition;
+            inst.transform.localPosition = new Vector3(olePos.x, olePos.y, 0f);
         }
 
 
