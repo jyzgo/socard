@@ -20,11 +20,18 @@ public static class AdMgr  {
     const string AND_INTER = "ca-app-pub-6770182166257156/6772132620";
     const string AND_NATIVE_BANNER = "ca-app-pub-6770182166257156/1452125829";
 
+    const string APPNILE_IOS_BANNER = "	ca-app-pub-6633827850565198/4629480893";
+    const string APPNILE_IOS_INTER = "ca-app-pub-6633827850565198/2172862037";
+    const string APPNILE_IOS_NATIVE_BAN = "ca-app-pub-6633827850565198/9352158680";
 
+
+    const string APPNILE_AND_BANNER = "";
+    const string APPNILE_AND_INTER = "";
+    const string APPNILE_AND_NATIVE_BAN = "";
 #if UNITY_IOS
-    const string BANNER = IOS_BANNER;
-    const string INTER = IOS_INTER;
-    const string NATIVE = IOS_NATIVE_BANNER;
+    const string BANNER = APPNILE_IOS_BANNER;
+    const string INTER = APPNILE_IOS_INTER;
+    const string NATIVE = APPNILE_IOS_NATIVE_BAN;
 #elif UNITY_ANDROID
     const string BANNER = AND_BANNER;
     const string INTER = AND_INTER;
