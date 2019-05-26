@@ -19,7 +19,6 @@ public class SettingInst : MonoBehaviour {
 
     void OnDisable()
     {
-        AdMgr.HideNativeBanner(); 
     }
 
 
@@ -31,7 +30,8 @@ public class SettingInst : MonoBehaviour {
     {
         UpdateT();
 
-        AdMgr.ShowNativeBanner(w,h,x,y);
+        //AdMgr.ShowNativeBanner(w,h,x,y);
+        AdMgr.ShowAdmobBanner();
     }
 
     void UpdateT()

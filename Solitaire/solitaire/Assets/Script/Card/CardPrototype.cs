@@ -306,11 +306,7 @@ public class CardPrototype : CardAbstract {
             cardSc = cardSc.GetTopCard();
             if (cardSc.isCardPutable(this))
             {
-                if (CardEditMgr.current.isAutoFlipOn) {
 
-                    cardSc.transform.eulerAngles = new Vector3(0, 180, 0);
-                   
-                }
 
                     cardSc.PutCard(this);
                 
@@ -421,32 +417,7 @@ public class CardPrototype : CardAbstract {
 
             if (cardState == CardState.InPlatform)
             {
-            if (CardEditMgr.current.isAutoFlipOn)
-            {
-                if (preCard is CardLoader)
-                {
-                    return true;
-                }else
-                {
-                    return !preCard.isUp();
-                }
-            }
-            else
-            {
-                if (!isUp())
-                {
-                    return true;
-                }
-                if ((int)cardColor % 2 != (int)card.cardColor % 2 && card.CardNum == CardNum - 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    //  Debug.Log("not met " + " this card  is " + gameObject.name + "other card is " + card);
-                    return false;
-                }
-            }
+           
 
             }
             else if (cardState == CardState.InTarget)

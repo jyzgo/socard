@@ -115,7 +115,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1
+  bundleVersion: 1.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -157,7 +157,7 @@ PlayerSettings:
     tvOS: com.solitaire.adevegame
   buildNumber:
     iOS: 1
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -245,7 +245,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: F:/Projects/Solitaire-Card/Solitaire/solitaire/ProjectSettings/solitairead.keystore
+  AndroidKeystoreName: E:/GameProjects/Solitaire-Card/Solitaire/solitaire/ProjectSettings/solitairead.keystore
   AndroidKeyaliasName: solitaire
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

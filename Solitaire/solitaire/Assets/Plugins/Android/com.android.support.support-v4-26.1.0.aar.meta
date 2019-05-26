@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: fb8efebd770744099a4896ab6818de16
+guid: 25a781ead1ac8934c8a3d7161b2a6ca7
 labels:
-- gvh
-- gvh_targets-editor
-- gvh_version-1.2.111.0
+- gpsr
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -15,6 +13,11 @@ PluginImporter:
   isExplicitlyReferenced: 0
   platformData:
   - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings: {}
+  - first:
       Any: 
     second:
       enabled: 0
@@ -22,15 +25,9 @@ PluginImporter:
   - first:
       Editor: Editor
     second:
-      enabled: 1
-      settings:
-        DefaultValueInitialized: true
-  - first:
-      Windows Store Apps: WindowsStoreApps
-    second:
       enabled: 0
       settings:
-        CPU: AnyCPU
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

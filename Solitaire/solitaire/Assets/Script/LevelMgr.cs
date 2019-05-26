@@ -9,7 +9,7 @@ using MTUnity.Utils;
 using MTUnity;
 using System.IO;
 using MTXxtea;
-using admob;
+
 
 [Serializable]
 public struct CardData
@@ -347,36 +347,36 @@ public class LevelMgr : MonoBehaviour
 
     }
 
-    void onAppLovinEventReceived(string ev)
-    {
-        if (ev.Contains("DISPLAYEDINTER"))
-        {
-            // An ad was shown.  Pause the game.
-            //MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "0", "applovin");
-            AdMgr.TrackApplovin("0");
-        }
-        else if (ev.Contains("HIDDENINTER"))
-        {
-            // Ad ad was closed.  Resume the game.
-            // If you're using PreloadInterstitial/HasPreloadedInterstitial, make a preload call here.
-            AdMgr.ApplovinPreloadInterstitial();
-            AdMgr.TrackApplovin("1");
-            //MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "1","applovin");
-        }
-        else if (ev.Contains("LOADEDINTER"))
-        {
-            // An interstitial ad was successfully loaded.
-            AdMgr.TrackApplovin("3");
-         //   MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "3", "applovin");
-        }
-        else if (string.Equals(ev, "LOADINTERFAILED"))
-        {
-            // An interstitial ad failed to load.
-            AdMgr.TrackApplovin("2");
-       //     MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "2", "applovin");
+    //void onAppLovinEventReceived(string ev)
+    //{
+    //    if (ev.Contains("DISPLAYEDINTER"))
+    //    {
+    //        // An ad was shown.  Pause the game.
+    //        //MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "0", "applovin");
+    //        AdMgr.TrackApplovin("0");
+    //    }
+    //    else if (ev.Contains("HIDDENINTER"))
+    //    {
+    //        // Ad ad was closed.  Resume the game.
+    //        // If you're using PreloadInterstitial/HasPreloadedInterstitial, make a preload call here.
+    //        AdMgr.ApplovinPreloadInterstitial();
+    //        AdMgr.TrackApplovin("1");
+    //        //MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "1","applovin");
+    //    }
+    //    else if (ev.Contains("LOADEDINTER"))
+    //    {
+    //        // An interstitial ad was successfully loaded.
+    //        AdMgr.TrackApplovin("3");
+    //     //   MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "3", "applovin");
+    //    }
+    //    else if (string.Equals(ev, "LOADINTERFAILED"))
+    //    {
+    //        // An interstitial ad failed to load.
+    //        AdMgr.TrackApplovin("2");
+    //   //     MTTracker.Instance.Track(SoliTrack.ads, StatisticsMgr.current.WinsCount(), "2", "applovin");
         
-        }
-    }
+    //    }
+    //}
 
     void Start()
     {
@@ -433,9 +433,6 @@ public class LevelMgr : MonoBehaviour
         {
             SaveGame();
         }
-
-        AdMgr.OnApplicationPause(paused);
-            
 
 
     }
@@ -1113,10 +1110,10 @@ public class LevelMgr : MonoBehaviour
         if (SettingMgr.current.PlayNoAdNum > 0)
         {
             SettingMgr.current.PlayNoAdNum--;
-            //if (SettingMgr.current.PlayNoAdNum == 0)
-            //{
-            //    AdMgr.PreloadAdmobInterstitial();
-            //}
+            if (SettingMgr.current.PlayNoAdNum <= 0)
+            {
+                AdMgr.PreloadAdmobInterstitial();
+            }
             SettingMgr.current.SaveToFile();
         }
 
@@ -1134,34 +1131,24 @@ public class LevelMgr : MonoBehaviour
         //}
         //else
         //{
-            if (AdMgr.ApplovinHasPreloadedInterstitial())
-            {
-               
-                AdMgr.ShowApplovinInterstitial();
 
-
-            }
-            else {
-                AdMgr.TrackApplovin("-2");
-            }
 
             if (AdMgr.IsAdmobInterstitialReady())
             {
 
                 AdMgr.ShowAdmobInterstitial();
             }
-            else
-            {
-                AdMgr.TrackAdMob("-2");
-            }
-            AdMgr.PlayVungleAd();
+            //else
+            //{
+            //    //AdMgr.TrackAdMob("-2");
+            //}
         //}
 
 
 
 
 
-        // AdMgr.ShowAdmobBanner();
+        AdMgr.ShowAdmobBanner();
 
         // AdMgr.ShowNativeBanner();
 
@@ -2134,30 +2121,30 @@ public class LevelMgr : MonoBehaviour
 
     public void onInterstitialEvent(string eventName, string msg)
     {
-        //Debug.Log("handler onAdmobEvent---" + eventName + "   " + msg);
-        if (eventName == AdmobEvent.onAdLoaded)
-        {
-            //AdMgr.ShowAdmobInterstitial();
-            AdMgr.TrackAdMob("3");
-        }
-        else if (eventName == AdmobEvent.onAdClosed)
-        {
+        ////Debug.Log("handler onAdmobEvent---" + eventName + "   " + msg);
+        //if (eventName == AdmobEvent.onAdLoaded)
+        //{
+        //    //AdMgr.ShowAdmobInterstitial();
+        //    AdMgr.TrackAdMob("3");
+        //}
+        //else if (eventName == AdmobEvent.onAdClosed)
+        //{
 
 
-            //AdMgr.PreloadAdmobInterstitial();
+        //    //AdMgr.PreloadAdmobInterstitial();
 
-            AdMgr.TrackAdMob("1");
+        //    AdMgr.TrackAdMob("1");
 
-        }
-        else if (eventName == AdmobEvent.onAdOpened)
-        {
+        //}
+        //else if (eventName == AdmobEvent.onAdOpened)
+        //{
          
-            AdMgr.TrackAdMob("0");
-        } else if (eventName == AdmobEvent.onAdFailedToLoad)
-        {
-            //AdMgr.PreloadAdmobInterstitial();
-            AdMgr.TrackAdMob("2");
-        }
+        //    AdMgr.TrackAdMob("0");
+        //} else if (eventName == AdmobEvent.onAdFailedToLoad)
+        //{
+        //    //AdMgr.PreloadAdmobInterstitial();
+        //    AdMgr.TrackAdMob("2");
+        //}
 
     }
     public void onBannerEvent(string eventName, string msg)
@@ -2174,17 +2161,6 @@ public class LevelMgr : MonoBehaviour
     }
 
 
-    #region VungleCallback
-
-    public void VunlgePlayAbleEvent(bool b)
-    {
-        if (b)
-        {
-            AdMgr.PlayVungleAd();
-        }
-    }
-    #endregion
-
-
 
 }
+
