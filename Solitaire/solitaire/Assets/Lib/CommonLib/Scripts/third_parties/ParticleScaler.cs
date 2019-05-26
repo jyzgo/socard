@@ -29,8 +29,6 @@ public class ParticleScaler : MonoBehaviour
 			
 			float scaleFactor = particleScale / prevScale;
 			
-			//scale legacy particle systems
-			ScaleLegacySystems(scaleFactor);
 			
 			//scale shuriken particle systems
 			ScaleShurikenSystems(scaleFactor);
@@ -87,42 +85,9 @@ public class ParticleScaler : MonoBehaviour
 		}
 	}
 	
-	void ScaleLegacySystems(float scaleFactor)
-	{
-		//get all emitters we need to do scaling on
-		ParticleEmitter[] emitters = GetComponentsInChildren<ParticleEmitter>();
 		
-		//get all animators we need to do scaling on
-		ParticleAnimator[] animators = GetComponentsInChildren<ParticleAnimator>();
 		
-		//apply scaling to emitters
-		for(int i = 0 ; i < emitters.Length;i ++)
-		{
-			var emitter = emitters[i];
-			emitter.minSize *= scaleFactor;
-			emitter.maxSize *= scaleFactor;
-			emitter.worldVelocity *= scaleFactor;
-			emitter.localVelocity *= scaleFactor;
-			emitter.rndVelocity *= scaleFactor;
-			
-			#if UNITY_EDITOR
-			//some variables cannot be accessed through regular script, we will acces them through a serialized object
-			SerializedObject so = new SerializedObject(emitter);
-			
-			so.FindProperty("m_Ellipsoid").vector3Value *= scaleFactor;
-			so.FindProperty("tangentVelocity").vector3Value *= scaleFactor;
-			so.ApplyModifiedProperties();
-			#endif
-		}
 		
-		//apply scaling to animators
-		for(int i = 0 ; i < animators.Length; i ++)
-		{
-			var animator = animators[i];
-			animator.force *= scaleFactor;
-			animator.rndForce *= scaleFactor;
-		}
-	}
 	
 	void ScaleTrailRenderers(float scaleFactor)
 	{

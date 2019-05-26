@@ -57,13 +57,7 @@ namespace MTUnity.Utils
 			{
 				return;
 			}
-			SkeletonRenderer skeleton = target.gameObject.GetComponentInChildren<SkeletonRenderer> ();
-			if (skeleton != null) {
-				Renderer render = skeleton.gameObject.GetComponentInChildren<Renderer> ();
-				if (render != null) {
-					render.sortingLayerName = sName;
-				}
-			}
+			
 
 			SpriteRenderer spRender = target.gameObject.GetComponentInChildren<SpriteRenderer>();
 			if(spRender!= null)
@@ -72,71 +66,8 @@ namespace MTUnity.Utils
 			}
 		}
 
-		public static void SetSortingOrder(this GameObject target,int order)
-		{
-			if(target == null)
-			{
-				return;
-			}
-			SkeletonRenderer skeleton = target.gameObject.GetComponentInChildren<SkeletonRenderer> ();
-			if (skeleton != null) {
-				Renderer render = skeleton.gameObject.GetComponentInChildren<Renderer> ();
-				if (render != null) {
-					render.sortingOrder = order;
-				}
-			}
-		}
+		
 
-		public static string GetSortingLayer(this GameObject target)
-		{
-			string temp = string.Empty;
-			if(target != null)
-			{
-				SkeletonRenderer skeleton = target.gameObject.GetComponentInChildren<SkeletonRenderer> ();
-				if (skeleton != null) {
-					Renderer render = skeleton.gameObject.GetComponentInChildren<Renderer> ();
-					if (render != null) {
-						temp = render.sortingLayerName ;
-					}
-				}
-			}
-
-			return temp;
-		}
-
-		public static void InitSpineAnim (this GameObject go, string skinName, string animName, bool loop = false)
-		{
-			SkeletonAnimation anim = go.GetComponentInChildren<SkeletonAnimation> ();
-			if (anim == null) {
-				return;
-			}
-
-			if (!string.IsNullOrEmpty (skinName)) {
-				anim.initialSkinName = skinName;
-			}
-			anim.loop = loop;
-			if (!string.IsNullOrEmpty (animName)) {
-				anim.AnimationName = animName;
-			}
-			anim.Reset ();
-			anim.LateUpdate ();
-		}
-
-		public static void ShowSpineAnim (this GameObject go, string animName, bool loop = false, float startTime = 0)
-		{
-			SkeletonAnimation anim = go.GetComponentInChildren<SkeletonAnimation> ();
-			if (anim == null) {
-				return;
-			}
-
-			anim.AnimationName = null;
-			anim.loop = loop;
-			anim.skeleton.SetToSetupPose();
-			anim.AnimationName = animName;
-			anim.Update (startTime);
-			anim.LateUpdate ();
-			anim.LateUpdate ();
-		}
 
 		public static void PlayParticle (this GameObject target)
 		{
@@ -195,13 +126,7 @@ namespace MTUnity.Utils
 			}
 			
 			do {
-				SkeletonAnimation anim = go.GetComponent<SkeletonAnimation> ();
-				if (anim != null) {
-					if (anim.Skeleton != null) {
-						anim.Skeleton.A = alpha;
-					}
-					break;
-				}
+				
 				
 				SpriteRenderer sprRenderer = go.GetComponent<SpriteRenderer> ();
 				if (sprRenderer != null) {

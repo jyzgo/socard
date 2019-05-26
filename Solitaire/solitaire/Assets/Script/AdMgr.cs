@@ -12,18 +12,8 @@ using admob;
 
 public static class AdMgr  {
     #region Admob-------------------------
-    const string IOS_BANNER = "ca-app-pub-6770182166257156/5882325420";
-    const string IOS_INTER = "ca-app-pub-6770182166257156/7359058623";
-    const string IOS_NATIVE_BANNER = "ca-app-pub-6770182166257156/8835791821";
-
-    const string AND_BANNER = "ca-app-pub-6770182166257156/5295399423";
-    const string AND_INTER = "ca-app-pub-6770182166257156/6772132620";
-    const string AND_NATIVE_BANNER = "ca-app-pub-6770182166257156/1452125829";
-
-    const string APPNILE_IOS_BANNER = "	ca-app-pub-6633827850565198/4629480893";
-    const string APPNILE_IOS_INTER = "ca-app-pub-6633827850565198/2172862037";
-    const string APPNILE_IOS_NATIVE_BAN = "ca-app-pub-6633827850565198/9352158680";
-
+    const string AND_BANNER = "ca-app-pub-6770182166257156/9205779753";
+    const string AND_INTER = "ca-app-pub-6770182166257156/6771188102";
 
     const string APPNILE_AND_BANNER = "";
     const string APPNILE_AND_INTER = "";
@@ -35,7 +25,7 @@ public static class AdMgr  {
 #elif UNITY_ANDROID
     const string BANNER = AND_BANNER;
     const string INTER = AND_INTER;
-    const string NATIVE = AND_NATIVE_BANNER;
+
 #endif
 
 
@@ -144,11 +134,12 @@ public static class AdMgr  {
 
     public static void ShowNativeBanner(int w,int h,int x,int y )
     {
+        return;
 #if (ADMOB_ENABLED)
         if (ad != null)
         {
            //ad.showNativeBannerAbsolute(new AdSize(w, h), x, y, OMG_NATIVE_BANNER_ID);
-            ad.showNativeBannerRelative(new AdSize(w, h), AdPosition.TOP_CENTER, y, NATIVE);
+            //ad.showNativeBannerRelative(new AdSize(w, h), AdPosition.TOP_CENTER, y, NATIVE);
         }
       
 #endif

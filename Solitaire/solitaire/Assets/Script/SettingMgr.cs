@@ -8,7 +8,6 @@ using MTXxtea;
 using System;
 using System.Collections.Generic;
 using MTUnity;
-using Facebook.Unity;
 
 public enum PlayState
 {
@@ -108,8 +107,6 @@ public class SettingMgr : MonoBehaviour {
     const int versionBase = 10000 + baseVer * 2;
     void Start()
     {
-        _user = new UserModel();
-        //FacebookMgr.current.InitFacebook();
 
         if (LoadDone != null)
         {
@@ -119,7 +116,6 @@ public class SettingMgr : MonoBehaviour {
     }
     const string settingFileName = "setting.dt";
     public PlayState _state = PlayState.Normal;
-    public UserModel _user;
     public int SoundControl = 1; //bool
     public int Hint = 0;// 0 1 2
     public int Draw3 = 0;//bool
