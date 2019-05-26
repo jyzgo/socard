@@ -257,16 +257,7 @@ public class ObjectPool : Singleton<ObjectPool> {
 
 		GameObject obj = curInstance.IGetGameObject (path, onlyPooled);
 
-		//出于性能考虑，屏幕外的spine动画会被关掉，然后可能会进入池中，所以从池中取出后默认将动画打开
-		if (obj != null) {
-			SkeletonAnimation anim = obj.GetComponent<SkeletonAnimation> ();
-			if (anim != null)
-				anim.enabled = true;
-			var anims = obj.GetComponentsInChildren<SkeletonAnimation> ();
-			for (int i = 0; i < anims.Length; ++i) {
-				anims [i].enabled = true;
-			}
-		}
+		
 
 
 		return obj;
