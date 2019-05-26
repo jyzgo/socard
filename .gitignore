@@ -18,6 +18,7 @@ obj/
 *.user
 *.unityproj
 *.booproj
+*/.vs
 
 # ============ #
 # OS generated #
@@ -35,3 +36,5 @@ build
 Solitaire/solitaire/Assembly-CSharp-Editor.csproj
 Solitaire/solitaire/Assembly-CSharp.csproj
 Solitaire/solitaire/solitaire.sln
+Solitaire/solitaire/.vs/
+
